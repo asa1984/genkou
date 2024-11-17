@@ -1,30 +1,23 @@
 import type { Mode } from '@/features/script-editor/types'
 import type { Script } from '@/shared/models/script'
 import { ModeSelector } from '@/features/script-editor/components/mode-selector'
-import { useUpdateScriptScriptsScriptIdPut } from '@/shared/api'
 import { EditableText } from '@/shared/components/editable-text'
 import { Save } from '@mui/icons-material'
 import { Box, Button, Grid2 as Grid, Toolbar } from '@mui/material'
 import { type FC, lazy, Suspense, useState } from 'react'
 
 const Markdown = lazy(() => import('@/features/markdown/components/markdown').then(module => ({ default: module.Markdown })))
-const Editor = lazy(() => import('@/features/editor/component/Editor'))
+const Editor = lazy(() => import('@/features/editor/components/editor').then(module => ({ default: module.Editor })))
 
 export type ScriptEditorPresentationalProps = Script
 
-export const ScriptEditorPresentational: FC<ScriptEditorPresentationalProps> = ({ id, content }) => {
+export const ScriptEditorPresentational: FC<ScriptEditorPresentationalProps> = ({ content }) => {
   const [markdown, setMarkdown] = useState<string>(content)
   const [mode, setMode] = useState<Mode>('edit')
 
-  const mutation = useUpdateScriptScriptsScriptIdPut()
-
   const handleClickSaveButton = () => {
-    mutation.mutate({
-      scriptId: id,
-      data: {
-        content: markdown,
-      },
-    })
+    // eslint-disable-next-line no-alert
+    alert('Save button clicked')
   }
 
   return (
@@ -51,12 +44,8 @@ export const ScriptEditorPresentational: FC<ScriptEditorPresentationalProps> = (
               <EditableText
                 initial="TITLE"
                 save={(title) => {
-                  mutation.mutate({
-                    scriptId: id,
-                    data: {
-                      title,
-                    },
-                  })
+                  // eslint-disable-next-line no-alert
+                  alert(`Saved: ${title}`)
                 }}
               />
             </Box>

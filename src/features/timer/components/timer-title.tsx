@@ -1,9 +1,9 @@
 import { Box } from '@mui/material'
 /** @jsxImportSource @emotion/react */
 import { useEffect, useState } from 'react'
-import Button from './Button'
-import Countdown from './Countdown'
-import InputField from './inputField'
+import Button from './button'
+import Countdown from './countdown'
+import InputField from './input-field'
 
 function TimerTitle() {
   const [minutes, setMinutes] = useState<string>('0')

@@ -2,7 +2,7 @@ import type { Preview } from '@storybook/react'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import { withThemeFromJSXProvider } from '@storybook/addon-themes'
 import { initTheme } from '../src/shared/styles/theme'
-import { storyRouterDecorator } from './TanStackRouter.mock'
+import { storyRouterDecorator } from './tanstack-router-mock'
 
 const preview: Preview = {
   parameters: {

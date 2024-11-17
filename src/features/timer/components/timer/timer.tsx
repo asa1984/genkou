@@ -1,4 +1,4 @@
-import TimerTitle from './TimerTitle'
+import TimerTitle from '../timer-title'
 
 function Timer() {
   return (

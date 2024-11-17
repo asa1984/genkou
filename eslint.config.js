@@ -13,6 +13,7 @@ export default antfu(
     react: true,
     markdown: false,
     jsonc: false,
+    toml: false,
   },
   {
     rules: {

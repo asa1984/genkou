@@ -1,5 +1,5 @@
 import type { Meta } from '@storybook/react'
-import Timer from './Timer'
+import Timer from './timer'
 
 const meta: Meta<typeof Timer> = {
   component: Timer,

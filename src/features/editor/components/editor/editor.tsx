@@ -6,7 +6,7 @@ export interface EditorProps {
   setMarkdown: (markdown: string) => void
 }
 
-const Editor: FC<EditorProps> = ({ markdown, setMarkdown }) => {
+export const Editor: FC<EditorProps> = ({ markdown, setMarkdown }) => {
   const customCommands = [
     commands.bold,
     commands.italic,
@@ -47,5 +47,3 @@ const Editor: FC<EditorProps> = ({ markdown, setMarkdown }) => {
     />
   )
 }
-
-export default Editor

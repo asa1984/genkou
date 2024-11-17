@@ -1,4 +1,4 @@
-import { ScriptEditor } from '@/features/script-editor/components/script-editor'
+// import { ScriptEditor } from '@/features/script-editor/components/script-editor'
 import { createLazyFileRoute } from '@tanstack/react-router'
 import { Suspense } from 'react'
 
@@ -9,10 +9,10 @@ export const Route = createLazyFileRoute(
 })
 
 function Page() {
-  const { scriptId } = Route.useParams()
+  // const { scriptId } = Route.useParams()
   return (
     <Suspense fallback="loading">
-      <ScriptEditor scriptId={scriptId} />
+      {/* <ScriptEditor scriptId={scriptId} /> */}
     </Suspense>
   )
 }
